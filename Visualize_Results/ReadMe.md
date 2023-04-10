@@ -1,4 +1,4 @@
-## Visualize_Results folder includes MATLAB code to apply statistical masks and visualize the resulting functional connectivity matrices from the AnalysisPipeline step.
+## Visualize_Results folder includes MATLAB code to apply statistical masks. It visualizes the resulting functional connectivity matrices from the AnalysisPipeline step.
 
 The fsaverage folder contains the MATLAB files for the fsaverage surface-based template with several smoothing values. 
 
