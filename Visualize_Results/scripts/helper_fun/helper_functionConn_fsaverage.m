@@ -158,8 +158,12 @@ results = visualize_connectivity(cimec);
         conn_mat.brainordinate = brainordinate;
         
         idx_band = find(strcmp(band_names, band_name));
-        tmp_data = group_results(idx_band).data_perSubject;
-        tmp_data(isnan(tmp_data)) = 1;
+        data_perSubject = group_results(idx_band).data_perSubject;
+        for ii = 1:size(data_perSubject, 3)
+            data_eachSubject = data_perSubject(:,:,ii);
+            data_eachSubject(logical(eye(360))) = NaN;
+            tmp_data(:,:,ii) = data_eachSubject;
+        end
         
         %% seeds
         idx_IFJa = find(strcmp(conn_mat.label, between{1}));
@@ -171,8 +175,13 @@ results = visualize_connectivity(cimec);
         FEF(:, :) = tmp_data(idx_FEF,:,:);
         
         %% mean values for the statistical test for 'not contrast'
-        stat_against = squeeze(mean(mean(tmp_data)));
-        
+        stat_against = squeeze(mean(mean(tmp_data, 'omitnan')));
+
+%         % for revision
+%         stat_against_tmp = squeeze(mean(mean(data_perSubject)));
+%         figure; histogram(data_perSubject); xline(mean(stat_against_tmp), '--r', num2str(mean(stat_against_tmp)));
+%         figure; histogram(tmp_data); xline(mean(stat_against), '--r', num2str(mean(stat_against)));
+
         %% ROIs/exploratory
         if strcmp(statistics.analysis_type, 'exploratory')
             all_labels = conn_mat.label';
@@ -181,6 +190,11 @@ results = visualize_connectivity(cimec);
             elseif or(strcmp(seed_target, 'right-right'), strcmp(seed_target, 'left-right'))
                 ROIs.name = all_labels(181:360);
             end
+            
+            % To show the seed area 
+            FEF(idx_FEF, :) = 1;
+            IFJa(idx_IFJa, :) = 1;
+            IFJp(idx_IFJp, :) = 1;
         end
         
         nROIs = length(ROIs.name);
@@ -509,10 +523,10 @@ results = visualize_connectivity(cimec);
                 down = cbar(n/2+1:n,:);
                 set(0, 'DefaultFigureColormap', [up;middle;down]);
                 
-                conn_mat.cohspctrm(ROIs.idx(~h_adj_IFJa),idx_IFJa) = 0.04;
-                conn_mat.cohspctrm(ROIs.idx(~h_adj_IFJp),idx_IFJp) = 0.04;
-                conn_mat.cohspctrm(idx_IFJa,ROIs.idx(~h_adj_IFJa)) = 0.04;
-                conn_mat.cohspctrm(idx_IFJp,ROIs.idx(~h_adj_IFJp)) = 0.04;
+                conn_mat.cohspctrm(ROIs.idx(~h_adj_IFJa),idx_IFJa) = 0.01;
+                conn_mat.cohspctrm(ROIs.idx(~h_adj_IFJp),idx_IFJp) = 0.01;
+                conn_mat.cohspctrm(idx_IFJa,ROIs.idx(~h_adj_IFJa)) = 0.01;
+                conn_mat.cohspctrm(idx_IFJp,ROIs.idx(~h_adj_IFJp)) = 0.01;
                 
             elseif and(contrast == false, strcmp(statistics.analysis_type, 'ROI'))
                 cbar = hot;
