@@ -523,10 +523,10 @@ results = visualize_connectivity(cimec);
                 down = cbar(n/2+1:n,:);
                 set(0, 'DefaultFigureColormap', [up;middle;down]);
                 
-                conn_mat.cohspctrm(ROIs.idx(~h_adj_IFJa),idx_IFJa) = 0.01;
-                conn_mat.cohspctrm(ROIs.idx(~h_adj_IFJp),idx_IFJp) = 0.01;
-                conn_mat.cohspctrm(idx_IFJa,ROIs.idx(~h_adj_IFJa)) = 0.01;
-                conn_mat.cohspctrm(idx_IFJp,ROIs.idx(~h_adj_IFJp)) = 0.01;
+                conn_mat.cohspctrm(ROIs.idx(~h_adj_IFJa),idx_IFJa) = 0.04;
+                conn_mat.cohspctrm(ROIs.idx(~h_adj_IFJp),idx_IFJp) = 0.04;
+                conn_mat.cohspctrm(idx_IFJa,ROIs.idx(~h_adj_IFJa)) = 0.04;
+                conn_mat.cohspctrm(idx_IFJp,ROIs.idx(~h_adj_IFJp)) = 0.04;
                 
             elseif and(contrast == false, strcmp(statistics.analysis_type, 'ROI'))
                 cbar = hot;
