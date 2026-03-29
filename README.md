@@ -15,7 +15,3 @@ This research is supported by Ministero degli Affari Esteri e della Cooperazione
 
 ### Data Availability Statement
 The data used in the current study provided and publicly made available by the 1200 Subjects Release of Human Connectome Project (Larson-Prior et al., 2013; Van Essen et al., 2013) in ConnectomeDB (db.humanconnectome.org; Hodge et al., 2016).
-
-### ORCID
-#### Orhan Soyuhos https://orcid.org/0000-0002-2858-3979 
-#### Daniel Baldauf https://orcid.org/0000-0001-5764-506X
