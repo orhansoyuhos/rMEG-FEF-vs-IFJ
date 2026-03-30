@@ -1,8 +1,8 @@
 # Functional connectivity fingerprints of the frontal eye field and inferior frontal junction suggest spatial versus nonspatial processing in the prefrontal cortex
-#### Paper: https://doi.org/10.1111/ejn.15936
 
-![Figure_1](https://user-images.githubusercontent.com/44211738/172026736-e0b69fc6-d48d-4988-baf7-a6447d9288fd.png)
-FIGURE 1 Predominant functional connectivity maps of FEF and IFJa across frequency bands and hemispheres for (A) oPEC and (B) iCOH metrics (two-sided Wilcoxon signed-rank test, p < 0.05, FDR-corrected for 33 ROIs). The results shown here are based on 2 s epoch segmentation.
+<p align="center">
+  <img width="60%" alt="fef_ifj" src="https://github.com/user-attachments/assets/88f5665d-b071-4de5-8fcc-a1179105a5ae" />
+</p>
 
 ## Abstract 
 
