@@ -10,8 +10,8 @@ Neuroimaging evidence suggests that the frontal eye field (FEF) and inferior fro
 
 Keywords: brain connectivity; magnetoencephalography; visual attention; visual pathways; working memory.
 
-### Acknowledgement
-This research is supported by Ministero degli Affari Esteri e della Cooperazione Internazionale (to O.S.) and Fondazione Cassa Di Risparmio Di Trento E Rovereto (to D.B).
-
 ### Data Availability Statement
 The data used in the current study provided and publicly made available by the 1200 Subjects Release of Human Connectome Project (Larson-Prior et al., 2013; Van Essen et al., 2013) in ConnectomeDB (db.humanconnectome.org; Hodge et al., 2016).
+
+## Citations
+Soyuhos, O., & Baldauf, D. (2023). Functional connectivity fingerprints of the frontal eye field and inferior frontal junction suggest spatial versus nonspatial processing in the prefrontal cortex. European Journal of Neuroscience, 57(7), 1114–1140. https://doi.org/10.1111/ejn.15936
