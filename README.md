@@ -22,9 +22,9 @@ rMEG-FEF-vs-IFJ/
 │       ├── clean_data.m                # MEG artifact removal (ICA, bad channels/segments)
 │       ├── scouts_timeSeries.m         # Source reconstruction via Brainstorm (dSPM2018)
 │       ├── functional_connectivity.m   # Per-subject connectivity computation (oPEC/iCOH/dwPLI/PDC)
-│       ├── results_connectivity.m      # Per-subject top-K extraction, saves .mat and .xlsx
-│       ├── group_average_topK_forSelectedROIs.m    # Group average for iCOH / dwPLI
-│       └── group_average_topK_wholeConnectivity.m  # Group average for oPEC / PDC
+│       ├── results_connectivity.m      # Per-subject connectivity results, saves .mat and .xlsx
+│       ├── group_average_topK_forSelectedROIs.m    # Group average for iCOH / dwPLI (seed-based)
+│       └── group_average_topK_wholeConnectivity.m  # Group average for oPEC / PDC (whole-brain)
 └── Visualize_Results/
     ├── fsaverage/                      # fsaverage surface templates (multiple smoothing levels)
     ├── results/                        # Group-level connectivity matrices (see Data Availability)
@@ -114,7 +114,7 @@ The pipeline runs three steps automatically:
 |------|----------|-------------|
 | 2 | `scouts_timeSeries` | Source reconstruction (Brainstorm + dSPM2018 inverse, Glasser atlas) |
 | 3 | `functional_connectivity` | Computes connectivity per subject per frequency band |
-| 4 | `results_connectivity` / `group_average` | Aggregates results and saves top-K coupled regions |
+| 4 | `results_connectivity` / `group_average` | Aggregates and saves group-level connectivity results |
 
 **Seed regions:** L/R FEF, L/R IFJa, L/R IFJp (Glasser atlas)  
 **Frequency bands:** delta (1–4 Hz), theta (4–8 Hz), alpha (8–13 Hz), beta (13–30 Hz), gamma (30–100 Hz)
@@ -142,8 +142,6 @@ Configurable options in each script: `band_name`, `seed_target`, `conn_metric`, 
 ## Data Availability
 
 The MEG data used in this study are publicly available through the [Human Connectome Project](https://db.humanconnectome.org/) (HCP 1200 Subjects Release).
-
-Example group-level connectivity matrices are available upon request: osoyuhos@ucdavis.edu
 
 ---
 
