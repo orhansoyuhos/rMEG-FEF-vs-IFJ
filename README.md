@@ -1,4 +1,4 @@
-# Functional Connectivity Fingerprints of the Frontal Eye Field and Inferior Frontal Junction
+# Functional connectivity fingerprints of the Frontal Eye Field and Inferior Frontal Junction
 
 ## Citation
 
