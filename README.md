@@ -1,5 +1,4 @@
-# Functional connectivity fingerprints of the Frontal Eye Field and Inferior Frontal Junction
-
+# Functional connectivity fingerprints of the FEF and IFJ
 ## Citation
 
 Soyuhos, O., & Baldauf, D. (2023). Functional connectivity fingerprints of the frontal eye field and inferior frontal junction suggest spatial versus nonspatial processing in the prefrontal cortex. *European Journal of Neuroscience, 57*(7), 1114–1140. https://doi.org/10.1111/ejn.15936
