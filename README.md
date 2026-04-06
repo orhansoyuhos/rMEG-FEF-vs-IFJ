@@ -122,7 +122,7 @@ The pipeline runs three steps automatically:
 **Ground-truth analysis — oPEC (orthogonalized Power Envelope Correlation):**
 
 <p align="center">
-  <img width="35%" alt="oPEC ground-truth" src="https://user-images.githubusercontent.com/44211738/159386267-29a470da-98c1-4d02-bc8b-d00d20b22017.PNG" />
+  <img width="50%" alt="oPEC ground-truth" src="https://user-images.githubusercontent.com/44211738/159386267-29a470da-98c1-4d02-bc8b-d00d20b22017.PNG" />
 </p>
 
 ### Step 3 — Visualization (`Visualize_Results/scripts/`)
